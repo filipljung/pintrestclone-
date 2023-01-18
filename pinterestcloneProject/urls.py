@@ -1,16 +1,15 @@
-from django.contrib import admin
-from django.urls import path, include
-from django.conf import settings
-from django.conf.urls.static import static
+from django.urls import path
 
+from . import views
+
+app_name = 'accounts'
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('pinterest.urls', namespace='pinterest')),
-    path('accounts/', include('accounts.urls', namespace='accounts')),
-    path('boards/', include('boards.urls', namespace='boards')),
-    path('pins/', include('pins.urls', namespace='pins')),
+    path('register/', views.user_register, name='user_register'),
+    path('login/', views.user_login, name='user_login'),
+    path('logout/', views.user_logout, name='user_logout'),
+    path('follow/<str:username>', views.follow, name='follow'),
+    path('unfollow/<str:username>', views.unfollow, name='unfollow'),
+    path('<str:username>/_saved/', views.profile, name='profile'),
+    path('settings/edit-profile/', views.edit_profile, name='edit_profile'),
 ]
-
-if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
