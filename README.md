@@ -32,7 +32,7 @@ then we show all pins in that boards.
 6. install app requirements: ```pip install -r requirements.txt```
 7. databse migrate: ```python manage.py migrate```
 8. run the server: ```python manage.py runserver```
-9. you should be able to open this address now: http://127.0.0.1:8000/
+9. you should be able to open this address now:
 
 ## To-Do:
 - [ ] in pin-detail page, show the board name in form if the pin is saved already
