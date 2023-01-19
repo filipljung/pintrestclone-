@@ -1,5 +1,4 @@
 # Django Pinterest Clone
-![Screenshot 2022-02-02 at 10-21-38 Pinterest-min](https://user-images.githubusercontent.com/71011395/152303215-f1b256c4-505c-4c4a-8ad6-eb044df43398.png)
 A pinterest clone:
 user can create a board and save pins on that board.  
 similar pins are also shown below each pin in pin-detail page.  
