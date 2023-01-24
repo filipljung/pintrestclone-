@@ -76,6 +76,10 @@ DATABASES = {
     }
 }
 
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('postgres://wigegpni:vYN1LXnLfkDOMBT-HaaQk9PImu8nRL1R@mel.db.elephantsql.com/wigegpni'))
+}
+
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
